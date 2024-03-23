@@ -146,7 +146,7 @@ const Map = (props) => {
         <div>
         <GoogleMap
             mapContainerStyle={mapContainerStyle}
-            zoom={15}
+            zoom={12}
             center={center}
             options={{
                 styles: dark_style,

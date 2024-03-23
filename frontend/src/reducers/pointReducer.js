@@ -4,21 +4,7 @@ const initialState = {
         lng: 24.828070085671612,
         severity: 1
     },
-    {
-        lat: 60.18496231386347, 
-        lng: 24.828070085671612,
-        severity: 2
-    },
-    {
-        lat: 60.18596231386347, 
-        lng: 24.828070085671612,
-        severity: 3
-    },
-    {
-        lat: 60.18696231386347,
-        lng: 24.828070085671612,
-        severity: 4
-    }]
+    ]
 };
 
 const pointReducer = (state = initialState, action) => {
@@ -35,6 +21,11 @@ const pointReducer = (state = initialState, action) => {
             };
         default:
             return state;
+        case 'REMOVE_ALL':
+            return {
+                ...state,
+                reportedPoints: []
+            };
     }
 };
 
@@ -49,6 +40,12 @@ export const removePoint = id => {
     return {
         type: 'REMOVE_POINT',
         id
+    };
+}
+
+export const removeAll = () => {
+    return {
+        type: 'REMOVE_ALL'
     };
 }
 

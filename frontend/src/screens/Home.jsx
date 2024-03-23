@@ -5,15 +5,15 @@ const Home = () => {
   return (
     <div className="root">
       <div className="content">
-        <h1>The Tie Project</h1>
+        <h1>Plow Patrol</h1>
         <nav>
           <Link className="link" to="/monitor">Go to Monitor</Link>
           <Link className="link" to="/reporting">Go to Reporting</Link>
         </nav>
         <br/>
         <div className="pictureframe">
-          <img src={"../../src/assets/monitor_data.png"}/>
-          <img src={"../../src/assets/monitor.png"}/>
+          <img src={"https://i.ibb.co/qj6Gc0C/monitor-data.png"}/>
+          <img src={"https://i.ibb.co/4TKfpxc/monitor.png"}/>
         </div>
       </div>
     </div>

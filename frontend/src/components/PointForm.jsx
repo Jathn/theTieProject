@@ -7,10 +7,10 @@ const PointForm = () => {
     const dispatch = useDispatch();
     const [point, setPoint] = useState({lat: 0, lng: 0, severity: 1});
     const pics = [
-        {severity: 1, url: '../../src/assets/snowy1.png'},
-        {severity: 2, url: '../../src/assets/snowy2.jpg'},
-        {severity: 3, url: '../../src/assets/snowy3.jpg'},
-        {severity: 4, url: '../../src/assets/snowy4.webp'},
+        {severity: 1, url: 'https://i.ibb.co/qCSZsnk/snowy1.png'},
+        {severity: 2, url: 'https://i.ibb.co/3pCwV8C/snowy2.jpg'},
+        {severity: 3, url: 'https://i.ibb.co/58Jk4RP/snowy3.jpg'},
+        {severity: 4, url: 'https://i.ibb.co/Pt8cgjL/snowy4.webp'},
     ]
     const pic_elems = pics.map((p) => {
         return (
