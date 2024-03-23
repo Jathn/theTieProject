@@ -6,7 +6,19 @@ import ReportingMap from './ReportingMap';
 const PointForm = () => {
     const dispatch = useDispatch();
     const [point, setPoint] = useState({lat: 0, lng: 0, severity: 1});
-    const [pic, setPic] = useState(1);
+    const pics = [
+        {severity: 1, url: '../../src/assets/snowy1.png'},
+        {severity: 2, url: '../../src/assets/snowy2.jpg'},
+        {severity: 3, url: '../../src/assets/snowy3.jpg'},
+        {severity: 4, url: '../../src/assets/snowy4.webp'},
+    ]
+    const pic_elems = pics.map((p) => {
+        return (
+            <img key={pics.indexOf(p)} src={p.url} alt={p
+            .severity} onClick={() => setPic(p)} />
+        );
+    });
+    const [pic, setPic] = useState(pics[0]);
     const center = {lat: 60.18396231386347, lng: 24.828070085671612};
 
     const setPointToPosition = (position) => {
@@ -18,17 +30,29 @@ const PointForm = () => {
 
         const latitute = parseFloat(point.lat);
         const longitude = parseFloat(point.lng);
-        const sev = parseInt(pic);
+        const sev = parseInt(pic.severity);
 
         dispatch(addPoint({lat: latitute, lng: longitude, severity: sev}));
         setPoint({lat: 0, lng: 0, severity: 1});
     };
-
+    
     return (
         <form onSubmit={handleSubmit}>
-            <ReportingMap center={center} setPointPos={setPointToPosition} width={50} height={50} />
-            <input type="number" value={pic} onChange={(e) => setPic(e.target.value)} />
+            <div className="reporting-container">
+            <div className="monitor-content">
+                <div style={{ display: 'flex' }}>
+                    <div >
+                        <ReportingMap center={center} setPointPos={setPointToPosition} width={20} height={30} />
+                    </div>
+                    <img className='chosenpic' src={pic.url} />
+                </div>
+            </div>
+                
+            </div>
             <button type="submit">Add Report</button>
+            <div className='pictureframe'>
+                {pic_elems}
+            </div>
         </form>
     );
 }

@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
-
+import './NavBar.css';
 const NavBar = () => {
     return (
-        <div>
+        <div className='navbar'>
             <table>
             <tbody>
                 <tr>
-                    <th><Link to="/">Home</Link></th>
-                    <th><Link to="/monitor">Monitor</Link></th>
-                    <th><Link to="/reporting">Reporting</Link></th>
+                    <th><Link to="/" className='navlink'>Home</Link></th>
+                    <th><Link to="/monitor" className='navlink'>Monitor</Link></th>
+                    <th><Link to="/reporting" className='navlink'>Reporting</Link></th>
                 </tr>
             </tbody>
             </table>

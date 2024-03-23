@@ -7,7 +7,7 @@ import "./App.css";
 
 const App = () => {
   return (
-    <div>
+    <div className='approot'>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -1,0 +1,52 @@
+.root {
+    height: 100vh;
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    background-color: rgba(41, 39, 39, 0.8);
+    height: 80vh;
+    width: 40vw;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.content h1 {
+    color: rgba(183, 177, 177, 0.493);
+    font-size: 5rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px 1px 1px rgba(56, 53, 53, 0.8);
+    margin-bottom: 20px;
+}
+
+.link {
+    color: rgba(183, 177, 177, 0.493);
+    background-color: rgba(56, 52, 56, 0.499);
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-inline-end: 50px;
+    margin-inline-start: 50px;
+}
+
+.link:hover {
+    background-color: rgba(56, 52, 56, 0.8);
+    color: rgba(183, 177, 177, 0.8);
+}
+
+.pictureframe img {
+    margin-inline-end: 70px;
+    margin-inline-start: 60px;
+    width: 10vw;
+    border: rgba(230, 230, 230, 0.8) solid 2px;
+    background-clip: border-box;
+}

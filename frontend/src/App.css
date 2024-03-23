@@ -1,1 +1,6 @@
-
+.approot {
+    background-image: url('../src/assets/background.jpg');
+    background-size: cover;
+    padding: 20px;
+    margin: -10px;
+}

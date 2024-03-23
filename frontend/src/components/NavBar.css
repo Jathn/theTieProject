@@ -1,0 +1,17 @@
+.navbar {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.navlink {
+    color: rgb(106, 104, 104);
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-inline-end: 50px;
+    margin-inline-start: 50px;
+    border: rgb(106, 104, 104) solid 2px;
+    border-radius: 20px;
+}
