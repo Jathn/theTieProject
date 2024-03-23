@@ -39,20 +39,24 @@ const PointForm = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div className="reporting-container">
-            <div className="monitor-content">
-                <div style={{ display: 'flex' }}>
-                    <div >
-                        <ReportingMap center={center} setPointPos={setPointToPosition} width={20} height={30} />
+                <div className="monitor-content">
+                    <div style={{ display: 'flex' }}>
+                        <div >
+                            <ReportingMap center={center} setPointPos={setPointToPosition} width={20} height={30} />
+                        </div>
+                        <img className='chosenpic' src={pic.url} />
                     </div>
-                    <img className='chosenpic' src={pic.url} />
                 </div>
-            </div>
-                
-            </div>
-            <button type="submit">Add Report</button>
-            <div className='pictureframe'>
-                {pic_elems}
-            </div>
+                    
+                </div>
+                <div className="submit">
+                    <p>Press the button to submit your report.</p>
+                    <button type="submit" className='navlink'>Add Report</button>
+                </div>
+                <div className='pictureselect'>
+                    {pic_elems}
+                </div>
+    
         </form>
     );
 }

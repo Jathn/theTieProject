@@ -28,3 +28,16 @@ h1 {
   height: 200px;
   margin-left: 20px;
 }
+
+.submit {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pictureselect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
