@@ -8,5 +8,5 @@ export default defineConfig({
   plugins: [
     react(),
   ],
-  base: '/theTieProject/',
+  base: 'https://thetieproject.onrender.com/'
 });
